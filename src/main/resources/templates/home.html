@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona główna</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<header>
+    <img src="../static/logo.jpg" alt="Logo" class="logo" th:src="@{/logo.jpg}">
+</header>
+
+<main>
+    <a href="/list">Wyświetl dodanych użytkowników</a>
+    <br><br>
+    <h2>Dodaj nowego użytkownika</h2>
+
+<form action="/form" method="post">
+    <label for="firstName">Podaj imię:</label>
+    <input type="text" id="firstName" name="firstName">
+    <label for="lastName">Podaj nazwisko:</label>
+    <input type="text" id="lastName" name="lastName">
+    <label for="birthDate">Data urodzenia:</label>
+    <input type="date" id="birthDate" name="birthDate">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <label>Użytkownik zapisany do newslettera?</label>
+    <label><input type="radio" name="isNewsletterSubscriber" value="true"> Tak</label>
+    <label><input type="radio" name="isNewsletterSubscriber" value="false"> Nie</label>
+    <br><br>
+    <br><br>
+    <input type="submit" value="Dodaj">
+</form>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
