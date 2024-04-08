@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista użytkowników</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<header>
+    <img src="../static/logo.jpg" alt="Logo" class="logo" th:src="@{/logo.jpg}">
+</header>
+
+<main>
+    <a href="/">Wróć do strony głównej</a>
+    <br><br>
+    <h2>Zapisani użytkownicy</h2>
+
+    <table style="border-collapse: collapse; border: 1px solid black;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid black;"> Imię </th>
+            <th style="border: 1px solid black;"> Nazwisko </th>
+            <th style="border: 1px solid black;"> Data urodzenia </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td style="border: 1px solid black;"><span th:text="${user.firstName}"> Imię </span></td>
+            <td style="border: 1px solid black;"><span th:text="${user.lastName}"> Nazwisko </span></td>
+            <td style="border: 1px solid black;"><span th:text="${user.birthDate}"> Data urodzin </span></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
