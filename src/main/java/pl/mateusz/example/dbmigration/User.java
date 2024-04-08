@@ -1,8 +1,6 @@
 package pl.mateusz.example.dbmigration;
 
 import jakarta.persistence.*;
-import jdk.jfr.BooleanFlag;
-import org.hibernate.type.TrueFalseConverter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -74,11 +72,11 @@ public class User {
         this.email = email;
     }
 
-    public boolean isNewsletterSubscriber() {
+    public boolean getIsNewsletterSubscriber() {
         return isNewsletterSubscriber;
     }
 
-    public void setNewsletterSubscriber(boolean newsletterSubscriber) {
+    public void setIsNewsletterSubscriber(boolean newsletterSubscriber) {
         isNewsletterSubscriber = newsletterSubscriber;
     }
 }

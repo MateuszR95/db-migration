@@ -1,7 +1,5 @@
 package pl.mateusz.example.dbmigration;
 
-import jakarta.persistence.Convert;
-import org.hibernate.type.TrueFalseConverter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -68,11 +66,11 @@ public class UserDto {
         this.email = email;
     }
 
-    public boolean isNewsletterSubscriber() {
+    public boolean getIsNewsletterSubscriber() {
         return isNewsletterSubscriber;
     }
 
-    public void setNewsletterSubscriber(boolean newsletterSubscriber) {
+    public void setIsNewsletterSubscriber(boolean newsletterSubscriber) {
         isNewsletterSubscriber = newsletterSubscriber;
     }
 }

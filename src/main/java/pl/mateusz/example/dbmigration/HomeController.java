@@ -3,9 +3,7 @@ package pl.mateusz.example.dbmigration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -24,9 +22,7 @@ public class HomeController {
     }
 
     @PostMapping("/form")
-    public String add(@RequestParam("isNewsletterSubscriber") String isNewsletterSubscriber,UserDto userDto) {
-        boolean newsletterSubscriber = "true".equals(isNewsletterSubscriber);
-        userDto.setNewsletterSubscriber(newsletterSubscriber);
+    public String add(UserDto userDto) {
         userService.add(userDto);
         return "success";
     }
